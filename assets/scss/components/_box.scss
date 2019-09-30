@@ -1,0 +1,25 @@
+.box-block {
+  padding: 20px;
+  border: 1px solid $gray-400;
+  margin: 0 0 10px;
+  width: 100%;
+
+  &.box-block-white {
+    background: $white;
+  }
+
+  &.box-block-gray {
+    background: $gray-200;
+    border: 1px solid $gray-200;
+  }
+
+  @include media-breakpoint-between(sm, lg) {
+    padding: 40px 32px;
+  }
+
+  @include media-breakpoint-only(xs) {
+    padding: 30px 15px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}

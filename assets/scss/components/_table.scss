@@ -1,0 +1,94 @@
+.table {
+  tr {
+    background-color: $white;
+    &.caption {
+      background-color: $gray-100;
+      td {
+        padding-top: 5px;
+        padding-bottom: 8px;
+        color: $gray-500;
+        background-color: $gray-100;
+        border-bottom: 9px solid $gray-100;
+        box-shadow: 0 1px 0 0 $gray-300 inset, 0 -1px 0 0 $gray-300 inset, 1px 0 0 0 $gray-300 inset, -1px 0 0 0 $gray-300 inset;
+      }
+    }
+    &.selected {
+      td {
+        box-shadow: 0 1px 0 0 $app-color-2 inset, 0 -1px 0 0 $app-color-2 inset;
+        &:first-child {
+          box-shadow: 0 1px 0 0 $app-color-2 inset, 0 -1px 0 0 $app-color-2 inset, 1px 0 0 0 $app-color-2 inset;
+        }
+        &:last-child {
+          box-shadow: 0 1px 0 0 $app-color-2 inset, 0 -1px 0 0 $app-color-2 inset, -1px 0 0 0 $app-color-2 inset;
+        }
+      }
+    }
+    &.unselected {
+      &:hover {
+        td {
+          opacity: 1;
+        }
+      }
+      td {
+        opacity: .3;
+      }
+    }
+
+    th {
+      background-color: $gray-200;
+      font-weight: 400;
+      padding: 18px;
+      vertical-align: middle;
+
+      &.sorting {
+        padding-right: 32px;
+        background-image: url("/images/sort.svg");
+        background-repeat: no-repeat;
+        background-position: right 8px center;
+      }
+      &.sorting_asc {
+        padding-right: 32px;
+        background-image: url("/images/sort-down.svg");
+        background-repeat: no-repeat;
+        background-position: right 8px center;
+      }
+      &.sorting_desc {
+        padding-right: 32px;
+        background-image: url("/images/sort-up.svg");
+        background-repeat: no-repeat;
+        background-position: right 8px center;
+      }
+
+    }
+    td {
+      vertical-align: middle;
+      padding: 18px;
+      border-bottom: 5px solid $gray-200;
+    }
+  }
+
+  .btn-remove,
+  .btn-action {
+    display: inline-block;
+    cursor: pointer;
+    i {
+      font-size: 24px;
+      color: $gray-400;
+      &:focus,
+      &:hover {
+        color: $gray-700;
+      }
+    }
+  }
+
+  .btn-remove {
+    i {
+      color: $primary-light;
+      &:focus,
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+}

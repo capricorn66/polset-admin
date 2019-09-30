@@ -1,0 +1,276 @@
+// stylelint-disable selector-no-qualifying-type
+
+button {
+    background-color: transparent;
+    border: 0;
+}
+
+//
+// Base styles
+//
+
+.btn {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: $btn-font-weight;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    letter-spacing: .8px;
+    border: 0 solid transparent;
+    height: $input-btn-height;
+    @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size-base !important, $btn-line-height, $btn-border-radius);
+    @include transition($btn-transition);
+
+    input {
+        min-height: $input-btn-height - .2rem;
+        @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size-base !important, $btn-line-height, $btn-border-radius);
+    }
+
+    // Share hover and focus styles
+    @include hover-focus {
+        text-decoration: none;
+    }
+
+    &:focus,
+    &.focus {
+        outline: 0;
+        box-shadow: none
+    }
+
+    // Disabled comes first so active can properly restyle
+    &.disabled,
+    &:disabled {
+        opacity: $btn-disabled-opacity;
+        @include box-shadow(none);
+    }
+
+    // Opinionated: add "hand" cursor to non-disabled .btn elements
+    &:not(:disabled):not(.disabled) {
+        cursor: pointer;
+    }
+    &.btn-primary {
+        background-color: $primary;
+        box-shadow: 0 0 0 1px $primary inset;
+        color: $white;
+        &:not(:disabled):not(.disabled):active,
+        &:active,
+        &:focus,
+        &:hover {
+            background-color: $white;
+            color: $primary;
+        }
+    }
+    &.btn-outline-primary {
+        background-color: $primary-light;
+        box-shadow: 0 0 0 1px $primary inset;
+        color: $primary;
+    }
+    &.btn-light {
+        background-color: $gray-300;
+        color: $black;
+        &:not(:disabled):not(.disabled):active,
+        &:active,
+        &:focus,
+        &:hover {
+            background-color: $primary;
+            color: $white;
+        }
+    }
+    &.btn-dark {
+        background-color: $gray-500;
+        color: $white;
+        &:not(:disabled):not(.disabled):active,
+        &:active,
+        &:focus,
+        &:hover {
+            background-color: $black;
+        }
+    }
+    &.btn-outline-dark {
+        background-color: $white;
+        box-shadow: 0 0 0 1px $black inset;
+        color: $black;
+    }
+
+    &.btn-accordion {
+        position: relative;
+        display: block;
+        width: 100%;
+        text-align: left;
+        height: 48px;
+        color: $black;
+        &::after {
+            content: "";
+            position: absolute;
+            right: 16px;
+            top: 16px;
+            margin-right: 16px;
+            width: 20px;
+            height: 20px;
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24px' height='24px' viewBox='0 0 24 24'%3E%3Cpath fill='%23D20018' d='M7.2,14.6l3.8-3.7l3.8,3.7l1.2-1.1l-5-4.9l-5,4.9L7.2,14.6Z'/%3E%3C/svg%3E");
+        }
+        &[aria-expanded="false"]::after {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24px' height='24px' viewBox='0 0 24 24'%3E%3Cpath fill='%23D20018' d='M14.833,8.6,11,12.33,7.167,8.6,6,9.735,11,14.6l5-4.865Z'/%3E%3C/svg%3E");
+        }
+    }
+
+    &.btn-check {
+        &.active {
+            background-color: $black;
+            color: $white;
+            &::before {
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23D20018' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+            }
+        }
+        &.checked {
+            &::before {
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23D20018' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+            }
+        }
+        background-color: $gray-300;
+        &:hover {
+            background-color: $gray-400;
+        }
+        &::before {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 16px;
+            width: 20px;
+            height: 20px;
+            top: 1.1rem;
+            left: 1rem;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23FFFFFF' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+        }
+    }
+}
+
+// Future-proof disabling of clicks on `<a>` elements
+a.btn.disabled,
+fieldset:disabled a.btn {
+    pointer-events: none;
+}
+
+
+//
+// Link buttons
+//
+
+// Make a button look and behave like a link
+.btn-default,
+.btn-link {
+    font-weight: $font-weight-normal;
+    color: $primary;
+    background-color: transparent;
+    transition: none;
+
+    .close {
+        position: relative;
+        margin-left: 10px;
+        span {
+            background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12px' height='12px' viewBox='0 0 32 32'%3E%3Cpath fill='%230B49DB' d='M32,2.829,29.171,0,16,13.171,2.829,0,0,2.829,13.171,16,0,29.171,2.829,32,16,18.829,29.171,32,32,29.171,18.829,16Z'/%3E%3C/svg%3E") no-repeat;
+        }
+    }
+
+    @include hover {
+        color: $link-hover-color;
+        text-decoration: none;
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+    &:focus,
+    &.focus {
+        text-decoration: none;
+        border-color: transparent;
+        box-shadow: none;
+        opacity: .7;
+    }
+
+    &:disabled,
+    &.disabled {
+        color: $btn-link-disabled-color;
+        pointer-events: none;
+    }
+
+    // No need for an active state here
+}
+
+
+//
+// Button Sizes
+//
+
+.btn-lg {
+    height: $input-btn-height-lg;
+    @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg !important, $btn-line-height-lg, $btn-border-radius-lg);
+    input {
+        min-height: $input-btn-height-lg - .2rem;
+        @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg !important, $btn-line-height-lg, $btn-border-radius-lg);
+    }
+    i[class^="icon-"],
+    i[class*="icon-"] {
+        margin-left: $btn-padding-x-lg/4;
+        margin-right: -$btn-padding-x-lg/4;
+    }
+    font-size: 20px !important;
+}
+
+.btn-sm {
+    height: $input-btn-height-sm;
+    padding-top: 1px !important;
+    @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm !important, $btn-line-height-sm, $btn-border-radius-sm);
+    input {
+        min-height: $input-btn-height-sm - .2rem;
+        @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm !important, $btn-line-height-sm, $btn-border-radius-sm);
+    }
+    i[class^="icon-"],
+    i[class*="icon-"] {
+        margin-left: $btn-padding-x-sm/4;
+        margin-right: -$btn-padding-x-sm/4;
+    }
+}
+
+
+//
+// Block button
+//
+
+.btn-block {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+
+    // Vertically space out multiple block buttons
+    + .btn-block {
+        margin-top: $btn-block-spacing-y;
+    }
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    &.btn-block {
+        width: 100%;
+    }
+}
+
+
+//
+// button with next icon
+//
+
+.btn[class*="btn-"] {
+    i[class^="icon-"],
+    i[class*="icon-"] {
+        font-size: 120%;
+        top: -1px;
+        position: relative;
+    }
+}

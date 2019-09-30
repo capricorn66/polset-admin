@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="imagetoolbar" content="no">
+    <![endif]-->
+
+    <meta name="Description" content="" />
+    <meta name="Keywords" content="" />
+    <meta name="distribution" content="Global" />
+    <meta name="msapplication-config" content="none"/>
+    <meta name="copyright" content="© eurekamedia.pl" />
+
+    <meta name="robots" content="noindex, nofollow"/>
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="title" content="POLSET admin panel">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900&display=swap&subset=latin-ext" rel="stylesheet">
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+
+
+    <aside class="sidebar" id="sidebar-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+        <div class="sidebar-head">
+            <h1><a class="navbar-brand" href="/#/"><img src="./images/polset-black.svg" alt="cinkciarz design system"></a></h1>
+            <button type="button" class="close ml-auto d-xl-none" data-toggle="sidebar" data-target="#sidebar-nav" aria-expanded="false" aria-controls="aside-nav">
+                <span aria-hidden="true"></span>
+            </button>
+        </div>
+        <div class="sidebar-body">
+            <ul class="nav nav-sidebar" id="accordion-nav">
+                <li class="nav-section">
+                    <h4 class="nav-section-link">
+                        <a class="nav-link active" href="#" data-navigo="" role="button">
+                            <i class="icon-models"></i> Modele <sup class="badge">2</sup>
+                        </a>
+                    </h4>
+                </li>
+                <li class="nav-section">
+                    <h4 class="nav-section-title">
+                        <a class="nav-link" data-toggle="collapse" href="#section-item2" role="button" aria-expanded="false" aria-controls="section-item2">
+                            <i class="icon-components"></i> Składniki wyceny
+                        </a>
+                    </h4>
+                    <div class="collapse" id="section-item2" data-parent="#accordion-nav">
+                        <ul class="nav-section-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-navigo="" role="button">
+                                    Item 2a
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-navigo="" role="button">
+                                    Item 2b
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-navigo="" role="button">
+                                    Item 2c
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-navigo="" role="button">
+                                    Item 2d
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-section">
+                    <h4 class="nav-section-link">
+                        <a class="nav-link" href="#" data-navigo="" role="button">
+                            <i class="icon-upholstery"></i> Materiały obiciowe
+                        </a>
+                    </h4>
+                </li>
+                <li class="nav-section">
+                    <h4 class="nav-section-link">
+                        <a class="nav-link" href="#" data-navigo="" role="button">
+                            <i class="icon-orders"></i> Zamówienia
+                        </a>
+                    </h4>
+                </li>
+                <li class="nav-section">
+                    <h4 class="nav-section-link">
+                        <a class="nav-link" href="#" data-navigo="" role="button">
+                            <i class="icon-customers"></i> Klienci
+                        </a>
+                    </h4>
+                </li>
+                <li class="nav-section">
+                    <h4 class="nav-section-link">
+                        <a class="nav-link" href="#" data-navigo="" role="button">
+                            <i class="icon-settings"></i> Ustawienia
+                        </a>
+                    </h4>
+                </li>
+
+            </ul>
+        </div>
+        <div class="sidebar-foot">
+            <div class="app-version">
+                Version 1.0.0
+            </div>
+        </div>
+    </aside>
+
+    <main role="main" itemscope itemprop="mainContentOfPage">
+
+        <div class="main-header">
+            <nav class="navbar">
+                <a class="navbar-brand d-xl-none" href="/#/"><img src="./images/polset-white.svg" alt="cinkciarz design system"></a>
+                <ul class="navbar-nav ml-auto flex-row">
+                    <li class="nav-item dropdown ml-32">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="avatar bg-primary mr-sm-8">JK</span><span class="d-none d-sm-inline">Jan Kowalski</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                </ul>
+                <button type="button" data-toggle="sidebar" data-target="#sidebar-nav" aria-expanded="false" aria-controls="aside-nav" class="btn btn-sm btn-outline-white ml-16 d-xl-none">Menu</button>
+            </nav>
+        </div>
+
+        <div class="main-view" id="view">
+            <div class="main-title flex-column flex-sm-row align-items-sm-center px-md-24">
+                <h1>Modele <small>Wyświetlono 1-10 z 78</small></h1>
+                <div class="ml-sm-auto">
+                    <button type="button" class="btn d-flex d-sm-inline-flex px-0" data-toggle="modal" data-target="#addModal">
+                        <i class="icon-plus mr-16 app-color-1"></i> DODAJ MODEL
+                    </button>
+                </div>
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row flex-sm-wrap align-items-sm-center mx-md-24">
+                <a class="btn btn-sm btn-outline-dark mb-24 mr-sm-32" data-toggle="collapse" href="#collapseFilters" role="button" aria-expanded="false" aria-controls="collapseFilters">
+                    POKAŻ FILTRY
+                </a>
+                <div class="ml-sm-auto d-flex flex-column flex-sm-row align-items-center">
+                    <div class="d-flex align-items-center mb-24 mr-sm-64">
+                        <label class="mr-16 no-wrap" for="Select1">Wyświetl na stronie</label>
+                        <select class="form-control form-control-sm mr-sm-2" id="Select1">
+                            <option selected>10</option>
+                            <option value="1">30</option>
+                            <option value="2">40</option>
+                            <option value="3">50</option>
+                        </select>
+                    </div>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" aria-label="Previous">
+                                    <span aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            </li>
+                            <li class="page-item active">
+                                <a class="page-link">1</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link">2</a>
+                            </li>
+                            <li class="page-truncate">...</li>
+                            <li class="page-item">
+                                <a class="page-link">12</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" aria-label="Next">
+                                    <span aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="collapse mx-md-24" id="collapseFilters">
+                <div class="box-block box-block-gray px-md-64 py-32 mb-32">
+                    <div class="row">
+                        <div class="col-md-6 col-xl-4">
+                            <h5>Tkanina</h5>
+                            <div class="form-row">
+                                <div class="col-lg-6">
+                                    <div class="form-group mb-16">
+                                        <label for="name1">Cena na biało w PLN od</label>
+                                        <input type="text" class="form-control" id="name1" placeholder="Enter email">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group mb-16">
+                                        <label for="name2">Cena na biało w PLN do</label>
+                                        <input type="text" class="form-control" id="name2" placeholder="Enter email">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-4">
+                            <h5>Skóra</h5>
+                            <div class="form-row">
+                                <div class="col-lg-6">
+                                    <div class="form-group mb-16">
+                                        <label for="name3">Cena na biało w PLN od</label>
+                                        <input type="text" class="form-control" id="name3" placeholder="Enter email">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group mb-16">
+                                        <label for="name4">Cena na biało w PLN do</label>
+                                        <input type="text" class="form-control" id="name4" placeholder="Enter email">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-4">
+                            <h5>Tkanina z wzorem</h5>
+                            <div class="form-row">
+                                <div class="col-lg-6">
+                                    <div class="form-group mb-16">
+                                        <label for="name5">Cena na biało w PLN od</label>
+                                        <input type="text" class="form-control" id="name5" placeholder="Enter email">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group mb-16">
+                                        <label for="name6">Cena na biało w PLN do</label>
+                                        <input type="text" class="form-control" id="name6" placeholder="Enter email">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-xl-4">
+                            <div class="form-group mb-16">
+                                <label for="name7">Wyszukaj</label>
+                                <input type="text" class="form-control form-control-search" id="name7" placeholder="Wpisz">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-4">
+                            <div class="form-group mb-16">
+                                <label for="name8">Kategoria</label>
+                                <select class="form-control" id="name8">
+                                    <option selected>-- wybierz --</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xl-4 d-flex align-items-end justify-content-end">
+                            <div class="mb-16">
+                                <button type="button" class="btn btn-secondary">Wyczyść filtry</button>
+                                <button type="button" class="btn btn-primary">ZASTOSUJ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-responsive mb-16">
+                <table class="table sort-table">
+                    <thead>
+                        <tr>
+                            <th>Lp</th>
+                            <th>Nazwa modelu</th>
+                            <th>Kategoria</th>
+                            <th>Tkanina</th>
+                            <th>Skóra</th>
+                            <th>Skóra</th>
+                            <th class="text-center">Kalkulacja</th>
+                            <th class="text-center">Edycja</th>
+                            <th class="text-center">Galeria</th>
+                            <th class="text-center">Usuń</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Alvesta Pillow Armchair Black Metal</td>
+                            <td>Fotele 1</td>
+                            <td>181,30&nbsp;PLN<br> <small class="app-color-2">93,00&nbsp;EUR</small></td>
+                            <td>197,70&nbsp;PLN<br> <small class="app-color-2">97,00&nbsp;EUR</small></td>
+                            <td>197,70&nbsp;PLN<br> <small class="app-color-2">97,00&nbsp;EUR</small></td>
+                            <td class="text-center"><a href="" class="btn-action"><i class="icon-settings"></i></a></td>
+                            <td class="text-center"><a href="" class="btn-action"><i class="icon-edit"></i></a></td>
+                            <td class="text-center"><a href="" class="btn-action"><i class="icon-images"></i></a></td>
+                            <td class="text-center"><a href="" class="btn-remove" data-toggle="modal" data-target="#removeModal"><i class="icon-delete"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Alvesta Pillow Armchair Black Metal</td>
+                            <td>Fotele 2</td>
+                            <td>281,30&nbsp;PLN<br> <small class="app-color-2">93,00&nbsp;EUR</small></td>
+                            <td>297,70&nbsp;PLN<br> <small class="app-color-2">97,00&nbsp;EUR</small></td>
+                            <td>297,70&nbsp;PLN<br> <small class="app-color-2">97,00&nbsp;EUR</small></td>
+                            <td class="text-center"><a href="" class="btn-action"><i class="icon-settings"></i></a></td>
+                            <td class="text-center"><a href="" class="btn-action"><i class="icon-edit"></i></a></td>
+                            <td class="text-center"><a href="" class="btn-action"><i class="icon-images"></i></a></td>
+                            <td class="text-center"><a href="" class="btn-remove" data-toggle="modal" data-target="#removeModal"><i class="icon-delete"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Alvesta Pillow Armchair Black Metal</td>
+                            <td>Fotele 3</td>
+                            <td>381,30&nbsp;PLN<br> <small class="app-color-2">93,00&nbsp;EUR</small></td>
+                            <td>397,70&nbsp;PLN<br> <small class="app-color-2">97,00&nbsp;EUR</small></td>
+                            <td>397,70&nbsp;PLN<br> <small class="app-color-2">97,00&nbsp;EUR</small></td>
+                            <td class="text-center"><a href="" class="btn-action"><i class="icon-settings"></i></a></td>
+                            <td class="text-center"><a href="" class="btn-action"><i class="icon-edit"></i></a></td>
+                            <td class="text-center"><a href="" class="btn-action"><i class="icon-images"></i></a></td>
+                            <td class="text-center"><a href="" class="btn-remove" data-toggle="modal" data-target="#removeModal"><i class="icon-delete"></i></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row flex-sm-wrap align-items-sm-center mx-md-24">
+                <a class="btn btn-sm btn-outline-dark mb-24 mr-sm-32" data-toggle="collapse" href="#collapseFilters" role="button" aria-expanded="false" aria-controls="collapseFilters">
+                    POKAŻ FILTRY
+                </a>
+                <div class="ml-sm-auto d-flex flex-column flex-sm-row align-items-center">
+                    <div class="d-flex align-items-center mb-24 mr-sm-64">
+                        <label class="mr-16 no-wrap" for="Select2">Wyświetl na stronie</label>
+                        <select class="form-control form-control-sm mr-sm-2" id="Select2">
+                            <option selected>10</option>
+                            <option value="1">30</option>
+                            <option value="2">40</option>
+                            <option value="3">50</option>
+                        </select>
+                    </div>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" aria-label="Previous">
+                                    <span aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            </li>
+                            <li class="page-item active">
+                                <a class="page-link">1</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link">2</a>
+                            </li>
+                            <li class="page-truncate">...</li>
+                            <li class="page-item">
+                                <a class="page-link">12</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" aria-label="Next">
+                                    <span aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <div class="bs4-xs d-block d-sm-none"></div>
+    <div class="bs4-sm d-none d-sm-block d-md-none"></div>
+    <div class="bs4-md d-none d-md-block d-lg-none"></div>
+    <div class="bs4-lg d-none d-lg-block d-xl-none"></div>
+    <div class="bs4-xl d-none d-xl-block d-sl-none"></div>
+    <div class="bs4-sl d-none d-sl-block"></div>
+
+    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addModalLabel">Dodaj model</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><span class="icon-close"></span></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group mb-32">
+                        <label for="name18">Nazwa modelu</label>
+                        <select class="form-control" id="name18">
+                            <option selected>-- wybierz --</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-32">
+                        <label for="name19">Kategoria</label>
+                        <select class="form-control" id="name19">
+                            <option selected>-- wybierz --</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Anuluj</button>
+                    <button type="button" class="btn btn-primary">ZAPISZ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="removeModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body text-center my-24">
+                    <h5 class="h3 mb-32">Czy na pewno chcesz usunąć?</h5>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Anuluj</button>
+                    <button type="button" class="btn btn-primary">ZAPISZ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
