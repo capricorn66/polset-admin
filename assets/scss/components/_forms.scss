@@ -6,6 +6,10 @@
     padding-right: 40px;
     background: $input-bg $icon-search no-repeat right 8px center !important;
   }
+  &.form-control-calendar {
+    padding-right: 40px;
+    background: $input-bg $icon-calendar no-repeat right 8px center !important;
+  }
 }
 
 .form-control-sm {

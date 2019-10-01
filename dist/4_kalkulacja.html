@@ -23,7 +23,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900&display=swap&subset=latin-ext" rel="stylesheet">
 
 
-</head>
+<link href="css/app.min.css" rel="stylesheet"></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
 
@@ -113,6 +113,7 @@
         </div>
     </aside>
 
+
     <main role="main" itemscope itemprop="mainContentOfPage">
 
         <div class="main-header">
@@ -135,8 +136,9 @@
         </div>
 
         <div class="main-view" id="view">
+
             <div class="main-title flex-column flex-sm-row align-items-sm-center px-md-24">
-                <h1>Modele <small>Wyświetlono 1-10 z 78</small></h1>
+                <h1>Zamówienia <small>Wyświetlono 1-10 z 78</small></h1>
                 <div class="ml-sm-auto">
                     <button type="button" class="btn d-flex d-sm-inline-flex px-0" data-toggle="modal" data-target="#addModal">
                         <i class="icon-plus mr-16 app-color-1"></i> DODAJ MODEL
@@ -144,20 +146,22 @@
                 </div>
             </div>
 
-            <div class="d-flex flex-column flex-sm-row flex-sm-wrap align-items-sm-center mx-md-24">
+            <div class="d-flex flex-column flex-sm-row align-items-sm-center px-16">
                 <a class="btn btn-sm btn-outline-dark mb-24 mr-sm-32" data-toggle="collapse" href="#collapseFilters" role="button" aria-expanded="false" aria-controls="collapseFilters">
                     POKAŻ FILTRY
                 </a>
-                <div class="ml-sm-auto d-flex flex-column flex-sm-row align-items-center">
-                    <div class="d-flex align-items-center mb-24 mr-sm-64">
-                        <label class="mr-16 no-wrap" for="Select1">Wyświetl na stronie</label>
-                        <select class="form-control form-control-sm mr-sm-2" id="Select1">
+                <div class="ml-sm-auto d-flex align-items-center">
+
+                    <div class="d-flex align-items-center mb-24 mr-md-64">
+                        <label class="mr-16 no-wrap" for="inlineFormCustomSelect">Wyświetl na stronie</label>
+                        <select class="form-control form-control-sm mr-sm-2" id="inlineFormCustomSelect">
                             <option selected>10</option>
                             <option value="1">30</option>
                             <option value="2">40</option>
                             <option value="3">50</option>
                         </select>
                     </div>
+
                     <nav aria-label="Page navigation example">
                         <ul class="pagination">
                             <li class="page-item">
@@ -191,54 +195,46 @@
                 <div class="box-block box-block-gray px-md-64 py-32 mb-32">
                     <div class="row">
                         <div class="col-md-6 col-xl-4">
-                            <h5>Tkanina</h5>
                             <div class="form-row">
                                 <div class="col-lg-6">
                                     <div class="form-group mb-16">
-                                        <label for="name1">Cena na biało w PLN od</label>
-                                        <input type="text" class="form-control" id="name1" placeholder="Enter email">
+                                        <label for="name1">Data od</label>
+                                        <input type="text" class="form-control form-control-calendar" id="name1" placeholder="">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group mb-16">
-                                        <label for="name2">Cena na biało w PLN do</label>
-                                        <input type="text" class="form-control" id="name2" placeholder="Enter email">
+                                        <label for="name2">Data do</label>
+                                        <input type="text" class="form-control form-control-calendar" id="name2" placeholder="">
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 col-xl-4">
-                            <h5>Skóra</h5>
                             <div class="form-row">
                                 <div class="col-lg-6">
                                     <div class="form-group mb-16">
-                                        <label for="name3">Cena na biało w PLN od</label>
-                                        <input type="text" class="form-control" id="name3" placeholder="Enter email">
+                                        <label for="name3">Wartość w EUR od</label>
+                                        <input type="text" class="form-control" id="name3" placeholder="">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group mb-16">
-                                        <label for="name4">Cena na biało w PLN do</label>
-                                        <input type="text" class="form-control" id="name4" placeholder="Enter email">
+                                        <label for="name4">Wartość w EUR do</label>
+                                        <input type="text" class="form-control" id="name4" placeholder="">
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 col-xl-4">
-                            <h5>Tkanina z wzorem</h5>
-                            <div class="form-row">
-                                <div class="col-lg-6">
-                                    <div class="form-group mb-16">
-                                        <label for="name5">Cena na biało w PLN od</label>
-                                        <input type="text" class="form-control" id="name5" placeholder="Enter email">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group mb-16">
-                                        <label for="name6">Cena na biało w PLN do</label>
-                                        <input type="text" class="form-control" id="name6" placeholder="Enter email">
-                                    </div>
-                                </div>
+                            <div class="form-group mb-16">
+                                <label for="name5">Okres</label>
+                                <select class="form-control" id="name5">
+                                    <option selected>-- wybierz --</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -251,12 +247,13 @@
                         </div>
                         <div class="col-md-6 col-xl-4">
                             <div class="form-group mb-16">
-                                <label for="name8">Kategoria</label>
-                                <select class="form-control" id="name8">
-                                    <option selected>-- wybierz --</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                <label for="exampleInputEmail5">custom select multiple</label>
+                                <select class="form-control custom-select" multiple data-multiple-separator="" title="select multiple items" id="exampleInputEmail5">
+                                    <option value="1" data-content="<span class='status status-new'>NOWE</span>">NOWE</option>
+                                    <option value="3" data-content="<span class='status status-confirmed'>ZATWIERDZONE</span>">ZATWIERDZONE</option>
+                                    <option value="4" data-content="<span class='status status-inprogress'>W REALIZACJI</span>">W REALIZACJI</option>
+                                    <option value="5" data-content="<span class='status status-canceled'>ANULOWANE</span>">ANULOWANE</option>
+                                    <option value="5" data-content="<span class='status status-completed'>ZREALIZOWANE</span>">ZREALIZOWANE</option>
                                 </select>
                             </div>
                         </div>
@@ -275,72 +272,80 @@
                     <thead>
                         <tr>
                             <th>Lp</th>
-                            <th>Nazwa modelu</th>
-                            <th>Kategoria</th>
-                            <th>Tkanina</th>
-                            <th>Skóra</th>
-                            <th>Skóra</th>
-                            <th class="text-center">Kalkulacja</th>
+                            <th>Kod</th>
+                            <th>Data zamówienia</th>
+                            <th>Klient</th>
+                            <th>Wartość zamówienia</th>
+                            <th>Status</th>
                             <th class="text-center">Edycja</th>
-                            <th class="text-center">Galeria</th>
-                            <th class="text-center">Usuń</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Alvesta Pillow Armchair Black Metal</td>
-                            <td>Fotele 1</td>
-                            <td>181,30&nbsp;PLN<br> <small class="app-color-2">93,00&nbsp;EUR</small></td>
-                            <td>197,70&nbsp;PLN<br> <small class="app-color-2">97,00&nbsp;EUR</small></td>
-                            <td>197,70&nbsp;PLN<br> <small class="app-color-2">97,00&nbsp;EUR</small></td>
-                            <td class="text-center"><a href="" class="btn-action"><i class="icon-settings"></i></a></td>
-                            <td class="text-center"><a href="" class="btn-action"><i class="icon-edit"></i></a></td>
-                            <td class="text-center"><a href="" class="btn-action"><i class="icon-images"></i></a></td>
-                            <td class="text-center"><a href="" class="btn-remove" data-toggle="modal" data-target="#removeModal"><i class="icon-delete"></i></a></td>
+                            <td>ABC123</td>
+                            <td>2019.07.16<br> 17:55:25</td>
+                            <td>Enim Nec LLP</td>
+                            <td>24 550,00 EUR</td>
+                            <td><div class="status status-new">NOWE</div></td>
+                            <td class="text-center"><span class="btn-action"><i class="icon-edit"></i></span></td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>Alvesta Pillow Armchair Black Metal</td>
-                            <td>Fotele 2</td>
-                            <td>281,30&nbsp;PLN<br> <small class="app-color-2">93,00&nbsp;EUR</small></td>
-                            <td>297,70&nbsp;PLN<br> <small class="app-color-2">97,00&nbsp;EUR</small></td>
-                            <td>297,70&nbsp;PLN<br> <small class="app-color-2">97,00&nbsp;EUR</small></td>
-                            <td class="text-center"><a href="" class="btn-action"><i class="icon-settings"></i></a></td>
-                            <td class="text-center"><a href="" class="btn-action"><i class="icon-edit"></i></a></td>
-                            <td class="text-center"><a href="" class="btn-action"><i class="icon-images"></i></a></td>
-                            <td class="text-center"><a href="" class="btn-remove" data-toggle="modal" data-target="#removeModal"><i class="icon-delete"></i></a></td>
+                            <td>XTY258</td>
+                            <td>2019.07.16<br> 17:55:25</td>
+                            <td>Eu Augue Incorporated</td>
+                            <td>20 943,30 EUR</td>
+                            <td><div class="status status-confirmed">ZATWIERDZONE</div></td>
+                            <td class="text-center"><span class="btn-action"><i class="icon-edit"></i></span></td>
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td>Alvesta Pillow Armchair Black Metal</td>
-                            <td>Fotele 3</td>
-                            <td>381,30&nbsp;PLN<br> <small class="app-color-2">93,00&nbsp;EUR</small></td>
-                            <td>397,70&nbsp;PLN<br> <small class="app-color-2">97,00&nbsp;EUR</small></td>
-                            <td>397,70&nbsp;PLN<br> <small class="app-color-2">97,00&nbsp;EUR</small></td>
-                            <td class="text-center"><a href="" class="btn-action"><i class="icon-settings"></i></a></td>
-                            <td class="text-center"><a href="" class="btn-action"><i class="icon-edit"></i></a></td>
-                            <td class="text-center"><a href="" class="btn-action"><i class="icon-images"></i></a></td>
-                            <td class="text-center"><a href="" class="btn-remove" data-toggle="modal" data-target="#removeModal"><i class="icon-delete"></i></a></td>
+                            <td>CFT678</td>
+                            <td>2019.06.28<br> 17:55:25</td>
+                            <td>Vestibulum Massa Rutrum Incorporated</td>
+                            <td>1 578,00 EUR</td>
+                            <td><div class="status status-inprogress">W REALIZACJI</div></td>
+                            <td class="text-center"><span class="btn-action"><i class="icon-edit"></i></span></td>
                         </tr>
+                        <tr class="gray-400">
+                            <td class="black">4</td>
+                            <td>POL128</td>
+                            <td>2019.06.19<br> 17:55:25</td>
+                            <td>Ac Orci Ut Institute</td>
+                            <td>218 000,00 EUR</td>
+                            <td><div class="status status-canceled">ANULOWANE</div></td>
+                            <td class="text-center"><span class="btn-action"><i class="icon-edit"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>NHY895</td>
+                            <td>2019.05.01<br> 17:55:25</td>
+                            <td>Nolte-Möbel GmbH & Co.</td>
+                            <td>20 580,80 EUR</td>
+                            <td><div class="status status-completed">ZREALIZOWANE</div></td>
+                            <td class="text-center"><span class="btn-action"><i class="icon-edit"></i></span></td>
+                        </tr>
+
                     </tbody>
                 </table>
             </div>
 
-            <div class="d-flex flex-column flex-sm-row flex-sm-wrap align-items-sm-center mx-md-24">
-                <a class="btn btn-sm btn-outline-dark mb-24 mr-sm-32" data-toggle="collapse" href="#collapseFilters" role="button" aria-expanded="false" aria-controls="collapseFilters">
-                    POKAŻ FILTRY
-                </a>
-                <div class="ml-sm-auto d-flex flex-column flex-sm-row align-items-center">
-                    <div class="d-flex align-items-center mb-24 mr-sm-64">
-                        <label class="mr-16 no-wrap" for="Select2">Wyświetl na stronie</label>
-                        <select class="form-control form-control-sm mr-sm-2" id="Select2">
+            <div class="d-flex flex-column flex-sm-row align-items-sm-center px-16">
+                <a href="" class="btn btn-sm btn-outline-dark mb-24">POKAŻ FILTRY</a>
+
+                <div class="ml-sm-auto d-flex align-items-center">
+
+                    <div class="d-flex align-items-center mb-24 mr-md-64">
+                        <label class="mr-16 no-wrap" for="inlineFormCustomSelect2">Wyświetl na stronie</label>
+                        <select class="form-control form-control-sm mr-sm-2" id="inlineFormCustomSelect2">
                             <option selected>10</option>
                             <option value="1">30</option>
                             <option value="2">40</option>
                             <option value="3">50</option>
                         </select>
                     </div>
+
                     <nav aria-label="Page navigation example">
                         <ul class="pagination">
                             <li class="page-item">
@@ -369,6 +374,7 @@
                     </nav>
                 </div>
             </div>
+
         </div>
     </main>
 
@@ -380,55 +386,5 @@
     <div class="bs4-xl d-none d-xl-block d-sl-none"></div>
     <div class="bs4-sl d-none d-sl-block"></div>
 
-    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="addModalLabel">Dodaj model</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><span class="icon-close"></span></span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group mb-32">
-                        <label for="name18">Nazwa modelu</label>
-                        <select class="form-control" id="name18">
-                            <option selected>-- wybierz --</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                    </div>
-                    <div class="form-group mb-32">
-                        <label for="name19">Kategoria</label>
-                        <select class="form-control" id="name19">
-                            <option selected>-- wybierz --</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Anuluj</button>
-                    <button type="button" class="btn btn-primary">ZAPISZ</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="removeModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body text-center my-24">
-                    <h5 class="h3 mb-32">Czy na pewno chcesz usunąć?</h5>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Anuluj</button>
-                    <button type="button" class="btn btn-primary">ZAPISZ</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-</body>
+<script type="text/javascript" src="js/app.min.js"></script></body>
 </html>

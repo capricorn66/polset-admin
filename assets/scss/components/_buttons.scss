@@ -81,6 +81,20 @@ button {
             color: $white;
         }
     }
+    &.btn-outline-light {
+        background-color: transparent;
+        box-shadow: 0 0 0 1px $white inset;
+        color: $white;
+        &:not(:disabled):not(.disabled):active,
+        &:active,
+        &:focus,
+        &:hover,
+        &[aria-expanded="true"] {
+            background-color: $white;
+            box-shadow: 0 0 0 1px $black inset;
+            color: $black;
+        }
+    }
     &.btn-dark {
         background-color: $gray-500;
         color: $white;
@@ -92,9 +106,18 @@ button {
         }
     }
     &.btn-outline-dark {
-        background-color: $white;
+        background-color: transparent;
         box-shadow: 0 0 0 1px $black inset;
         color: $black;
+        &:not(:disabled):not(.disabled):active,
+        &:active,
+        &:focus,
+        &:hover,
+        &[aria-expanded="true"] {
+            background-color: $primary-light;
+            box-shadow: 0 0 0 1px $primary inset;
+            color: $primary;
+        }
     }
 
     &.btn-accordion {
@@ -104,6 +127,10 @@ button {
         text-align: left;
         height: 48px;
         color: $black;
+        .btn {
+            position: relative;
+            z-index: 2;
+        }
         &::after {
             content: "";
             position: absolute;
@@ -272,5 +299,13 @@ input[type="button"] {
         font-size: 120%;
         top: -1px;
         position: relative;
+    }
+    &.btn-sm {
+        i[class^="icon-"],
+        i[class*="icon-"] {
+            font-size: 100%;
+            top: 0;
+            position: relative;
+        }
     }
 }

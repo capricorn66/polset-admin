@@ -75,6 +75,13 @@ $(document).ready( function() {
 
     wavesInit();
 
+    $('.btn-accordion .btn').click(function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        var modalId = $(this).attr('id');
+        $(modalId).modal();
+    });
+
     $('.date-picker').daterangepicker({
         timePicker: true,
         timePicker24Hour: true,

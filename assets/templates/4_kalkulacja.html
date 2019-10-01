@@ -120,7 +120,7 @@
             <nav class="navbar">
                 <a class="navbar-brand d-xl-none" href="/#/"><img src="./images/polset-white.svg" alt="cinkciarz design system"></a>
                 <ul class="navbar-nav ml-auto flex-row">
-                    <li class="nav-item dropdown ml-32">
+                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="avatar bg-primary mr-sm-8">JK</span><span class="d-none d-sm-inline">Jan Kowalski</span>
                         </a>
@@ -131,23 +131,25 @@
                         </div>
                     </li>
                 </ul>
-                <button type="button" data-toggle="sidebar" data-target="#sidebar-nav" aria-expanded="false" aria-controls="aside-nav" class="btn btn-sm btn-outline-white ml-16 d-xl-none">Menu</button>
+                <button type="button" data-toggle="sidebar" data-target="#sidebar-nav" aria-expanded="false" aria-controls="aside-nav" class="btn btn-sm btn-outline-light ml-32 d-xl-none">Menu</button>
             </nav>
         </div>
 
         <div class="main-view" id="view">
 
-
-            <div class="main-header flex-column flex-sm-row align-items-sm-center">
+            <div class="main-title flex-column flex-sm-row align-items-sm-center px-md-24">
                 <h1>Zamówienia <small>Wyświetlono 1-10 z 78</small></h1>
                 <div class="ml-sm-auto">
-                    <a href="" class="btn d-flex d-sm-inline-flex px-0"> <i class="icon-plus mr-16"></i> DODAJ MODEL</a>
+                    <button type="button" class="btn d-flex d-sm-inline-flex px-0" data-toggle="modal" data-target="#addModal">
+                        <i class="icon-plus mr-16 app-color-1"></i> DODAJ MODEL
+                    </button>
                 </div>
             </div>
 
             <div class="d-flex flex-column flex-sm-row align-items-sm-center px-16">
-                <a href="" class="btn btn-sm btn-outline-dark mb-24">POKAŻ FILTRY</a>
-
+                <a class="btn btn-sm btn-outline-dark mb-24 mr-sm-32" data-toggle="collapse" href="#collapseFilters" role="button" aria-expanded="false" aria-controls="collapseFilters">
+                    POKAŻ FILTRY
+                </a>
                 <div class="ml-sm-auto d-flex align-items-center">
 
                     <div class="d-flex align-items-center mb-24 mr-md-64">
@@ -189,7 +191,83 @@
                 </div>
             </div>
 
-            <div class="table-responsive">
+            <div class="collapse mx-md-24" id="collapseFilters">
+                <div class="box-block box-block-gray px-md-64 py-32 mb-32">
+                    <div class="row">
+                        <div class="col-md-6 col-xl-4">
+                            <div class="form-row">
+                                <div class="col-lg-6">
+                                    <div class="form-group mb-16">
+                                        <label for="name1">Data od</label>
+                                        <input type="text" class="form-control form-control-calendar" id="name1" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group mb-16">
+                                        <label for="name2">Data do</label>
+                                        <input type="text" class="form-control form-control-calendar" id="name2" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-4">
+                            <div class="form-row">
+                                <div class="col-lg-6">
+                                    <div class="form-group mb-16">
+                                        <label for="name3">Wartość w EUR od</label>
+                                        <input type="text" class="form-control" id="name3" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group mb-16">
+                                        <label for="name4">Wartość w EUR do</label>
+                                        <input type="text" class="form-control" id="name4" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-4">
+                            <div class="form-group mb-16">
+                                <label for="name5">Okres</label>
+                                <select class="form-control" id="name5">
+                                    <option selected>-- wybierz --</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-xl-4">
+                            <div class="form-group mb-16">
+                                <label for="name7">Wyszukaj</label>
+                                <input type="text" class="form-control form-control-search" id="name7" placeholder="Wpisz">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-4">
+                            <div class="form-group mb-16">
+                                <label for="exampleInputEmail5">custom select multiple</label>
+                                <select class="form-control custom-select" multiple data-multiple-separator="" title="select multiple items" id="exampleInputEmail5">
+                                    <option value="1" data-content="<span class='status status-new'>NOWE</span>">NOWE</option>
+                                    <option value="3" data-content="<span class='status status-confirmed'>ZATWIERDZONE</span>">ZATWIERDZONE</option>
+                                    <option value="4" data-content="<span class='status status-inprogress'>W REALIZACJI</span>">W REALIZACJI</option>
+                                    <option value="5" data-content="<span class='status status-canceled'>ANULOWANE</span>">ANULOWANE</option>
+                                    <option value="5" data-content="<span class='status status-completed'>ZREALIZOWANE</span>">ZREALIZOWANE</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xl-4 d-flex align-items-end justify-content-end">
+                            <div class="mb-16">
+                                <button type="button" class="btn btn-secondary">Wyczyść filtry</button>
+                                <button type="button" class="btn btn-primary">ZASTOSUJ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-responsive mb-16">
                 <table class="table sort-table">
                     <thead>
                         <tr>

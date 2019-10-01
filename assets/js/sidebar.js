@@ -6,7 +6,7 @@ export function sidebarInit() {
     const $sidebarBtn = $('[data-toggle="sidebar"]');
     const sidebarID = $sidebarBtn.attr('data-target');
     const $sidebar = $(sidebarID);
-    const $sidebarOverlay = $('#main');
+    const $sidebarOverlay = $('main');
     let prevDistance = 0;
     let currentDistance = 0;
     let startClosing = false;

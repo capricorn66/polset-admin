@@ -50,11 +50,36 @@
                 }
                 &.dropdown-toggle {
                     background-color: transparent;
-                    padding-right: 32px;
+                    padding: 0;
+                    &:after {
+                        display: none;
+                    }
                 }
             }
             .dropdown-menu {
+                position: absolute;
+                border-radius: 0;
+                border: 0;
+                background-color: $app-color-1;
+                margin-top: 12px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    right: 12px;
+                    bottom: 100%;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 0 6px 6px 6px;
+                    border-color: transparent transparent $app-color-1 transparent;
+                }
                 .dropdown-item {
+                    background-color: $app-color-1;
+                    padding: 10px 16px;
+                    color: $white;
+                    &:hover {
+                        background-color: darken($app-color-1, 5%);
+                    }
                     sup.badge {
                         margin-left: 4px;
                     }

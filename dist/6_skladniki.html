@@ -23,10 +23,9 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900&display=swap&subset=latin-ext" rel="stylesheet">
 
 
-</head>
+<link href="css/app.min.css" rel="stylesheet"></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-
 
     <aside class="sidebar" id="sidebar-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
         <div class="sidebar-head">
@@ -113,7 +112,6 @@
         </div>
     </aside>
 
-
     <main role="main" itemscope itemprop="mainContentOfPage">
 
         <div class="main-header">
@@ -137,150 +135,104 @@
 
         <div class="main-view" id="view">
 
-            <div class="d-flex mb-24">
-                <a href=""><i class="icon-arrow-left mr-8"></i> <span class="black">wróć do Klienci</span></a>
-            </div>
-
             <div class="main-title flex-column flex-sm-row align-items-sm-center px-md-16">
-                <h1>Zamówienie  <span class="app-color-1">ABC123</span></h1>
-            </div>
-            <div class="d-flex flex-wrap justify-content-between px-md-16 mb-40 mt-n16">
-                <a href="" class="btn btn-sm btn-outline-dark mb-16 mr-16"><i class="icon-printer mr-16"></i> Drukuj</a>
-                <div class="d-flex align-items-center mb-16">
-                    <span class="mr-16">Pobierz</span>
-                    <a href="" class="btn btn-sm btn-outline-dark mr-16">PDF</a>
-                    <a href="" class="btn btn-sm btn-outline-dark mr-16">CSV</a>
-                    <a href="" class="btn btn-sm btn-outline-dark">Excel</a>
-                </div>
+                <h1>Składniki wyceny</h1>
             </div>
 
-            <div class="row">
-                <div class="col-lg-6 d-flex">
-                    <div class="box-block d-flex align-items-center">
-                        <div class="w-100">
-                            <div class="row align-items-center">
-                                <div class="col-md-4">
-                                    Klient:
-                                </div>
-                                <div class="col-md-8">
-                                    <strong class="h3">Nolte-Möbel GmbH & Co.</strong>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="box-block box-block-gray py-3">
-                        Data zamówienia: <strong>2019.06.28 08:30:12</strong>
-                    </div>
-                    <div class="box-block box-block-gray py-3">
-                        Data ostatniej aktualizacji statusu: <strong>2019.06.29 15:45:50</strong>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 d-flex">
-                    <div class="box-block d-flex align-items-center">
-                        <div class="w-100">
-                            <div class="row align-items-center">
-                                <div class="col-md-4">
-                                    Wartość zamówienia::
-                                </div>
-                                <div class="col-md-8">
-                                    <strong class="h3">9 610,00 EUR</strong>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="box-block box-block-white">
-                        <div class="row">
-                            <label for="staticEmail" class="col-sm-2 col-form-label">Status</label>
-                            <div class="col-sm-6">
-                                <select class="form-control custom-select" title="select item" id="staticEmail">
-                                    <option value="1" data-content="<span class='status status-new'>NOWE</span>">NOWE</option>
-                                    <option value="3" data-content="<span class='status status-confirmed'>ZATWIERDZONE</span>">ZATWIERDZONE</option>
-                                    <option value="4" data-content="<span class='status status-inprogress'>W REALIZACJI</span>">W REALIZACJI</option>
-                                    <option value="5" data-content="<span class='status status-canceled'>ANULOWANE</span>">ANULOWANE</option>
-                                    <option value="5" data-content="<span class='status status-completed'>ZREALIZOWANE</span>">ZREALIZOWANE</option>
-                                </select>
-                            </div>
-                            <div class="col-sm-4 text-right">
-                                <button type="submit" class="btn btn-dark">ZMIEŃ STATUS</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <h3 class="h6 bg-black white px-16 py-8 mt-0 mb-8">Surowce</h3>
 
-            <div class="clearfix mb-32"></div>
+            <div id="headingOne">
+                <button class="btn btn-link btn-accordion mb-8" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    SUROWCE PODSTAWOWE
+                    <a href="" class="btn px-0" id="#editName">
+                        <i class="icon-edit ml-8 gray-500"></i>
+                    </a>
+                </button>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
+                <div class="table-responsive">
 
-            <div class="table-responsive">
-                <table class="table">
-                    <thead>
+                    <table class="table">
+                        <thead>
                         <tr>
-                            <th>Lp</th>
-                            <th>Model</th>
-                            <th class="text-right">Cena na biało</th>
-                            <th>Materiał obiciowy</th>
-                            <th>Kategoria materiału</th>
-                            <th class="text-right">Wartość materiału</th>
-                            <th class="text-right">Cena za szt.</th>
-                            <th class="text-center">Ilość</th>
-                            <th class="text-right">Wartość</th>
+                            <th>Nazwa</th>
+                            <th class="text-center">Jednostka miary</th>
+                            <th class="text-right">Cena za jednostk</th>
+                            <th class="text-center">Edycja</th>
+                            <th class="text-center">Usuń</th>
                         </tr>
-                    </thead>
-                    <tbody>
+                        </thead>
+                        <tbody>
                         <tr>
-                            <td>1</td>
-                            <td><strong>Alvesta Pillow Armchair Black Metal</strong></td>
-                            <td class="text-right">200,00 EUR</td>
-                            <td>Cowboy 802 camel</td>
-                            <td>Tkanina</td>
-                            <td class="text-right">50,00 EUR</td>
-                            <td class="text-right">250,00 EUR</td>
-                            <td class="text-center">20</td>
-                            <td class="text-right">5 000,00 EUR</td>
+                            <td>Alvesta Pillow Armchair Black Metal</td>
+                            <td class="text-center">m2</td>
+                            <td class="text-right">181,30&nbsp;PLN</td>
+                            <td class="text-center">
+                                <a href="" class="btn-action"><i class="icon-edit"></i></a>
+                            </td>
+                            <td class="text-center">
+                                <a href="" class="btn-remove" data-toggle="modal" data-target="#removeModal"><i class="icon-delete"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Alvesta Pillow Armchair Black Metal</td>
+                            <td class="text-center">m2</td>
+                            <td class="text-right">181,30&nbsp;PLN</td>
+                            <td class="text-center">
+                                <a href="" class="btn-action"><i class="icon-edit"></i></a>
+                            </td>
+                            <td class="text-center">
+                                <a href="" class="btn-remove" data-toggle="modal" data-target="#removeModal"><i class="icon-delete"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Alvesta Pillow Armchair Black Metal</td>
+                            <td class="text-center">m2</td>
+                            <td class="text-right">181,30&nbsp;PLN</td>
+                            <td class="text-center">
+                                <a href="" class="btn-action"><i class="icon-edit"></i></a>
+                            </td>
+                            <td class="text-center">
+                                <a href="" class="btn-remove" data-toggle="modal" data-target="#removeModal"><i class="icon-delete"></i></a>
+                            </td>
                         </tr>
                         <tr class="caption">
-                            <td colspan="9">Uwagi do produktu: <span class="black">Proszę zastosować podwójne przeszycie na całym obwodzie.</span></td>
+                            <td colspan="5">
+                                <a class="btn btn-sm px-0">
+                                    <i class="icon-plus mr-8 app-color-1"></i> DODAJ WARIANT
+                                </a>
+                            </td>
                         </tr>
                         <tr>
-                            <td>2</td>
-                            <td><strong>Jessica Chair</strong></td>
-                            <td class="text-right">100,00 EUR</td>
-                            <td>Bronco 05</td>
-                            <td>Tkanina</td>
-                            <td class="text-right">50,00 EUR</td>
-                            <td class="text-right">250,00 EUR</td>
-                            <td class="text-center">20</td>
-                            <td class="text-right">5 000,00 EUR</td>
+                            <td>Alvesta Pillow Armchair Black Metal</td>
+                            <td class="text-center">m2</td>
+                            <td class="text-right">181,30&nbsp;PLN</td>
+                            <td class="text-center">
+                                <a href="" class="btn-action"><i class="icon-edit"></i></a>
+                            </td>
+                            <td class="text-center">
+                                <a href="" class="btn-remove" data-toggle="modal" data-target="#removeModal"><i class="icon-delete"></i></a>
+                            </td>
                         </tr>
                         <tr class="caption">
-                            <td colspan="9">Uwagi do produktu: <span class="black">Proszę zastosować podwójne przeszycie na całym obwodzie.</span></td>
+                            <td colspan="5">
+                                <a class="btn btn-sm px-0">
+                                    <i class="icon-plus mr-8 app-color-1"></i> DODAJ WARIANT
+                                </a>
+                            </td>
                         </tr>
-                        <tr>
-                            <td>3</td>
-                            <td><strong>Sam Pillow</strong></td>
-                            <td class="text-right">300,00 EUR</td>
-                            <td>Verona 21 / Verona 12</td>
-                            <td>Tkanina</td>
-                            <td class="text-right">50,00 EUR</td>
-                            <td class="text-right">250,00 EUR</td>
-                            <td class="text-center">20</td>
-                            <td class="text-right">5 000,00 EUR</td>
-                        </tr>
-                        <tr class="caption">
-                            <td colspan="9">Uwagi do produktu: <span class="black">Proszę zastosować podwójne przeszycie na całym obwodzie.</span></td>
-                        </tr>
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+
+                </div>
             </div>
 
-            <div class="box-block">
-                <span class="gray-500">Uwagi do zamówienia:</span> Proszę ładnie zapakować w papier kolorowy, najlepiej różowy.
-            </div>
+            <button type="button" class="btn btn-sm btn-light w-100 mb-16" data-toggle="modal" data-target="#addModal">
+                <i class="icon-plus mr-8 app-color-1"></i> DODAJ CZYNNOŚĆ
+            </button>
+
+
+
 
         </div>
     </main>
@@ -293,5 +245,28 @@
     <div class="bs4-xl d-none d-xl-block d-sl-none"></div>
     <div class="bs4-sl d-none d-sl-block"></div>
 
-</body>
+    <div class="modal fade" id="editName" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addModalLabel">Zmień nazwę</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><span class="icon-close"></span></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group mb-32">
+                        <label for="name18">Nazwa Surowca</label>
+                        <input type="text" id="name18" class="form-control" value="Surowce">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Anuluj</button>
+                    <button type="button" class="btn btn-primary">ZAPISZ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript" src="js/app.min.js"></script></body>
 </html>
