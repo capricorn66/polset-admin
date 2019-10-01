@@ -15,12 +15,14 @@ function generateHtmlPlugins(templateDir) {
         const name = parts[0];
         return new HtmlWebpackPlugin({
             filename: `${name}.html`,
+            chunks: [ templateDir === 'templates' ? 'app' : 'appIO'],
             template: `./assets/${templateDir}/${name}.html`,
         });
     });
 }
 
 const htmlTemplates = generateHtmlPlugins('templates');
+const htmlTemplatesIO = generateHtmlPlugins('templateIO');
 
 
 module.exports = (env, options) => {
@@ -31,6 +33,7 @@ module.exports = (env, options) => {
 
         entry: {
             app: './assets/app.js',
+            appIO: './assets/app-io.js',
         },
 
         output: {
@@ -48,7 +51,9 @@ module.exports = (env, options) => {
                 filename: devMode ? 'css/[name].css' : 'css/[name].min.css',
                 chunkFilename: devMode ? 'css/[id].css' : 'css/[id].min.css',
             }),
-        ].concat(htmlTemplates),
+        ]
+            .concat(htmlTemplates)
+            .concat(htmlTemplatesIO),
 
         optimization: {
             minimizer: [
