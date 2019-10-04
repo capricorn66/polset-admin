@@ -66,7 +66,7 @@ $line-height-lg:                1.5 !default;
 $line-height-sm:                1.5 !default;
 
 // Typo
-$body-font-family:            'Source Sans Pro', sans-serif;
+$font-family-base:            'Source Sans Pro', sans-serif !default;
 
 $super-font-size:             4.8rem !default;
 $h1-font-size:                3.4rem !default;
@@ -115,7 +115,7 @@ $h4-line-height-sm:           $h4-line-height !default;
 $h5-line-height-sm:           $h5-line-height !default;
 $h6-line-height-sm:           $h6-line-height !default;
 
-$headings-font-family:        $body-font-family;
+$headings-font-family:        $font-family-base;
 $headings-font-weight:        600 !default;
 
 $lead-font-size:              1.8rem !default;
