@@ -82,17 +82,23 @@ $(document).ready( function() {
         $(modalId).modal();
     });
 
+    moment.locale('pl');
+
     $('.date-picker').daterangepicker({
         timePicker: true,
         timePicker24Hour: true,
-        timePickerIncrement: 1,
+        useSeconds: false,
+        timePickerIncrement: 30,
         cancelClass: "btn-secondary",
         timePickerSeconds: false,
         locale: {
-            format: 'HH:mm:ss'
+            format: 'HH:mm',
+            cancelLabel: 'ANULUJ',
+            applyLabel: 'ZAPISZ',
         }
     }).on('show.daterangepicker', function (ev, picker) {
         picker.container.find(".calendar-table").hide();
+        picker.container.addClass('timePicker');
     });
 
     $('.single-date-picker').daterangepicker({
@@ -100,10 +106,12 @@ $(document).ready( function() {
         showDropdowns: true,
         startDate: '+1d',
         cancelClass: "btn-secondary",
+        minYear: parseInt(moment().year() - 5),
+        maxYear: parseInt(moment().year()),
         locale: {
-            format: 'DD/MM/YYYY'
+            format: 'DD.MM.YYYY'
         }
-    });
+    }).data('daterangepicker');
 
     $('.sort-table').DataTable({
         "lengthChange": false,

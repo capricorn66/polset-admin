@@ -63,8 +63,16 @@
     td {
       vertical-align: middle;
       padding: 18px;
-      border-bottom: 5px solid $gray-200;
+      border-bottom: 5px solid $gray-100;
+      border-top: 0;
     }
+  }
+
+  thead tr th {
+    border-bottom: 5px solid $gray-100;
+    border-top: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   .btn-remove,

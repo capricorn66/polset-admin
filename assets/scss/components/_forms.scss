@@ -10,6 +10,19 @@
     padding-right: 40px;
     background: $input-bg $icon-calendar no-repeat right 8px center !important;
   }
+
+  &::-webkit-input-placeholder { /* Edge */
+    color: rgba($gray-500,.6);
+  }
+
+  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgba($gray-500,.6);
+  }
+
+  &::placeholder {
+    color: rgba($gray-500,.6);
+  }
+
 }
 
 .form-control-sm {

@@ -7,7 +7,6 @@ body {
     width: 330px;
   }
   color: $black;
-  border-right: 1px solid $gray-400;
   font-family: $headings-font-family;
   z-index: $zindex-aside;
   top: 0;
@@ -25,7 +24,10 @@ body {
   justify-content: space-between;
 
   .sidebar-head {
-    padding: 14px 24px;
+    padding: 25px 24px;
+    @include media-breakpoint-down(md) {
+      padding: 15px 20px;
+    }
     display: -ms-flexbox;
     display: flex;
     h1 {
@@ -35,7 +37,10 @@ body {
         padding: 0;
         line-height: 28px;
         img {
-          height: 28px;
+          height: 38px;
+          @include media-breakpoint-down(sm) {
+            height: 28px;
+          }
         }
       }
     }
@@ -128,6 +133,9 @@ body {
           }
           .badge {
             top: 20px;
+            @include media-breakpoint-down(md) {
+              top: 16px;
+            }
             position: absolute;
             right: 16px;
           }

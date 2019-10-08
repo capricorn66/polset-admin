@@ -5,6 +5,9 @@
 }
 .navbar {
     height: $navbarHeight;
+    @include media-breakpoint-down(md) {
+        height: $navbarHeight - 2rem;
+    }
     z-index: $zindex-header;
     background: $black;
     color: $white;
@@ -25,7 +28,10 @@
             margin-left: 0;
         }
         img {
-            height: 28px;
+            height: 38px;
+            @include media-breakpoint-down(sm) {
+                height: 28px;
+            }
         }
     }
 
@@ -61,7 +67,7 @@
                 border-radius: 0;
                 border: 0;
                 background-color: $app-color-1;
-                margin-top: 12px;
+                margin-top: 28px;
                 &::before {
                     content: "";
                     position: absolute;
