@@ -91,6 +91,7 @@ $(document).ready( function() {
         timePickerIncrement: 30,
         cancelClass: "btn-secondary",
         timePickerSeconds: false,
+        parentEl: '#view',
         locale: {
             format: 'HH:mm',
             cancelLabel: 'ANULUJ',
@@ -103,11 +104,9 @@ $(document).ready( function() {
 
     $('.single-date-picker').daterangepicker({
         singleDatePicker: true,
-        showDropdowns: true,
         startDate: '+1d',
         cancelClass: "btn-secondary",
-        minYear: parseInt(moment().year() - 5),
-        maxYear: parseInt(moment().year()),
+        parentEl: '#view',
         locale: {
             format: 'DD.MM.YYYY'
         }

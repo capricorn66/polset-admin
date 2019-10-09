@@ -42,19 +42,19 @@
 
       &.sorting {
         padding-right: 32px;
-        background-image: url("/images/sort.svg");
+        background-image: url("../images/sort.svg");
         background-repeat: no-repeat;
         background-position: right 8px center;
       }
       &.sorting_asc {
         padding-right: 32px;
-        background-image: url("/images/sort-down.svg");
+        background-image: url("../images/sort-down.svg");
         background-repeat: no-repeat;
         background-position: right 8px center;
       }
       &.sorting_desc {
         padding-right: 32px;
-        background-image: url("/images/sort-up.svg");
+        background-image: url("../images/sort-up.svg");
         background-repeat: no-repeat;
         background-position: right 8px center;
       }

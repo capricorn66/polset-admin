@@ -115,7 +115,7 @@ module.exports = (env, options) => {
                 {
                     test: /\.(svg|png|jpg|gif)$/,
                     include: [
-                        path.resolve(__dirname, './images'),
+                        path.resolve(__dirname, 'assets/images'),
                     ],
                     use: {
                         loader: "file-loader",

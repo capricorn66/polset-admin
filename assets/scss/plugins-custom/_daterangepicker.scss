@@ -1,5 +1,6 @@
 .daterangepicker {
   border: 1px solid $gray-400;
+  border-radius: 0;
   @include media-breakpoint-down(sm) {
     width: 270px;
   }
@@ -37,14 +38,13 @@
   .calendar-table thead > tr:first-child th {
     height: 48px;
     width: 40px;
-    border-bottom: 8px solid $white;
     &.month {
       width: auto;
     }
     &.available:hover {
       background: transparent;
       span {
-        border-color: $primary;
+        border-color: $black;
       }
     }
   }
@@ -71,13 +71,13 @@
   &.single {
     .calendar-table td.start-date {
       &.start-date.available {
-        border-radius: 20px;
+        border-radius: 0;
       }
     }
   }
 
   .calendar-table td {
-    border-radius: 18px;
+    border-radius: 8;
     height: 34px;
     width: 34px;
     font-size: 1.2rem;
@@ -90,18 +90,16 @@
     }
     &.active,
     &.active:hover {
-      box-shadow: 0 0 0 18px $primary inset;
-      background: transparent;
+      background: $black;
       &.off {
-        box-shadow: 0 0 0 18px lighten($primary, 25%) inset;
         color: $white;
       }
     }
     &.end-date.available {
-      border-radius: 0 18px 18px 0;
+      border-radius: 0;
     }
     &.start-date.available {
-      border-radius: 18px 0 0 18px;
+      border-radius: 0;
     }
     &.in-range {
       border-radius: 0;
