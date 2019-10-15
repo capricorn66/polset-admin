@@ -61,6 +61,7 @@ select.form-control.form-control-lg {
 select.form-control {
   &:not([multiple]) {
     background-size: 24px!important;
+    padding-right: 32px;
     -moz-appearance: none;
     -webkit-appearance: none;
     background: $input-bg url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24px' height='24px' viewBox='0 0 24 24'%3E%3Cpath fill='%23000000' d='M14.833,8.6,11,12.33,7.167,8.6,6,9.735,11,14.6l5-4.865Z'/%3E%3C/svg%3E") no-repeat right 2px center !important;
