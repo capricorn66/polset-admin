@@ -144,6 +144,11 @@
 
             <div class="main-title flex-column flex-sm-row align-items-sm-center px-md-16">
                 <h1>Zamówienie  <span class="app-color-1">ABC123</span></h1>
+                <div class="ml-sm-auto">
+                    <button type="button" class="btn d-flex d-sm-inline-flex px-0" data-toggle="modal" data-target="#addProductModal">
+                        <i class="icon-plus mr-16 app-color-1"></i> DODAJ PRODUKT DO ZAMÓWIENIA
+                    </button>
+                </div>
             </div>
             <div class="d-flex flex-wrap justify-content-between px-md-16 mb-40 mt-n16">
                 <a href="" class="btn btn-sm btn-outline-dark mb-16 mr-16"><i class="icon-printer mr-16"></i> Drukuj</a>
@@ -293,6 +298,91 @@
     <div class="bs4-lg d-none d-lg-block d-xl-none"></div>
     <div class="bs4-xl d-none d-xl-block d-sl-none"></div>
     <div class="bs4-sl d-none d-sl-block"></div>
+
+    <div class="modal fade" id="addProductModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addModalLabel">Dodaj produkt do zamówienia</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><span class="icon-close"></span></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group mb-32">
+                        <div class="form-row">
+                            <div class="col-10">
+                                <label for="name17">Produkt</label>
+                                <select class="form-control" id="name17">
+                                    <option selected>Choose...</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="col-2">
+                                <label for="name18">Ilość</label>
+                                <input class="form-control" id="name18">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-32">
+                        <label for="name19">Cena na biało</label>
+                        <select class="form-control" id="name19">
+                            <option selected>-- wybierz --</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-32">
+                        <div class="form-row align-items-end">
+                            <div class="col flex-grow-0">
+                                <div class="custom-control custom-radio mb-8">
+                                    <input type="radio" class="custom-control-input" id="customControl2" name="customRadioInline1">
+                                    <label class="custom-control-label" for="customControl2"></label>
+                                </div>
+                            </div>
+                            <div class="col flex-grow-1">
+                                <label for="name20">Wybierz materiał z oferty</label>
+                                <select class="form-control" id="name20">
+                                    <option selected>-- wybierz --</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-32">
+                        <div class="form-row align-items-end">
+                            <div class="col flex-grow-0">
+                                <div class="custom-control custom-radio mb-8">
+                                    <input type="radio" class="custom-control-input" id="customControl3" name="customRadioInline1">
+                                    <label class="custom-control-label" for="customControl3"></label>
+                                </div>
+                            </div>
+                            <div class="col flex-grow-1">
+                                <label for="name21" class="gray-500">Dodaj własny materiał</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="name21">EUR / mb</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Anuluj</button>
+                    <button type="button" class="btn btn-primary">DODAJ DO ZAMÓWIENIA</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
